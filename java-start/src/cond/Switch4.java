@@ -1,0 +1,17 @@
+package cond;
+
+/*
+java 14에서 변경된 switch
+ */
+public class Switch4 {
+    public static void main(String[] args) {
+        int grade = 0;
+        int coupon = switch (grade) {
+            case 1 -> 1000;
+            case 2 -> 2000;
+            case 3 -> 3000;
+            default -> 500;
+        };
+        System.out.println("발급 받은 쿠폰:" + coupon + "원");
+    }
+}
